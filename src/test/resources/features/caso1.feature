@@ -8,7 +8,6 @@ Feature: Casos web demoqa
   @Caso1
   Scenario: Validar la longitud de cuenta corriente
     Given I enter to ToolsQA page
-#    When
-#    Then se valida la longitud de la cuenta
-#      | Longitud |
-#      | 10       |
+    When I create an account
+    And register a book
+    Then the book is register
