@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -8,8 +9,15 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import tasks.Fill;
+import tasks.Going;
+
+import java.util.List;
+import java.util.Map;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static userinterfaces.LoginPage.newUserBtn;
 
 public class caso1StepDefinitions {
     @Before
@@ -33,14 +41,32 @@ public class caso1StepDefinitions {
         );
     }
 
-//    @Given("^I select the Categoty and Subcategoty$")
-//    public void iSelectTheCategotyAndSubcategoty(DataTable dataTable) {
+    @Given("^I create an account$")
+    public void iCreateAnAccount(DataTable dataTable) {
+
+        List<Map<String, String>> data = dataTable.asMaps();
+        for (Map<String, String> registerData : data ) {
+
+            String firstName = registerData.get("firstName");
+            String lastName = registerData.get("lastName");
+            String userName = registerData.get("userName");
+            String password = registerData.get("password");
+
+
+            theActorInTheSpotlight().
+                    attemptsTo(
+                            Going.to(newUserBtn),
+                            Fill.registerFields(firstName, lastName, userName, password)
+                    );
+            theActorInTheSpotlight().remember("User name", userName);
+        }
+
 //        OnStage.theActorCalled("Customer").wasAbleTo(
-//                Selecting.categoryAndSubcategory(
-//                        CategoryAndSubcategoryData.setData(dataTable).get(0)
-//                )
+//                Going.to(newUserBtn),
+//                Fill.registerFields(newUserBtn)
 //        );
-//    }
+
+    }
 
     @When("I add {string} products to the Shopping Cart")
     public void iAddproductsToTheShoppingCart(String productsNumber) {
