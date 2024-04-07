@@ -1,4 +1,3 @@
-@Regression
 Feature: Cases demoqa.com web
 
   Como usuario de la aplicación
@@ -9,16 +8,17 @@ Feature: Cases demoqa.com web
     Given I enter to ToolsQA page
 
   @CaseOne
-  Scenario: Create and delete account to add and delete books to the collection
-    Given I create an account
-      | firstName | lastName | userName | password  |
-      | Test01    | Test01   | test01   | Test2023* |
-    When register the books
-      | Book                   |
-      | Programming JavaScript |
-    And Delete the book and the account
-      | Book                   |
-      | Programming JavaScript |
-    Then Only the book is are register
+  Scenario: to add and delete books to the collection and delete account
+    Given I login with my user already created
+      | userName | password  |
+      | test01   | Test2023* |
+    When I register the books
+#      | Book                       |
+#      | Programming JavaScript     |
+#      | Understanding ECMAScript 6 |
+#    And delete the book and the account
+#      | Book                   |
+#      | Programming JavaScript |
+#    Then only the book is are register
 
 

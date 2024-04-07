@@ -9,9 +9,10 @@ import org.junit.runner.Runner;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@Regression",
+        //tags = "@Regression",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
+
 
 public class casosRunner {
 
