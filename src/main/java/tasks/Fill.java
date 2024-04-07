@@ -5,30 +5,23 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.EnterValue;
 import net.serenitybdd.screenplay.actions.Scroll;
-import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import static userinterfaces.RegisterPage.*;
+import static userinterfaces.LoginPage.*;
 
 public class Fill implements Task {
-
-    private final String firstName;
-    private final String lastName;
     private final String userName;
     private final String password;
 
-    public Fill(String firstName, String lastName, String userName, String password) {
+    public Fill(String userName, String password) {
 
-        this.firstName = firstName;
-        this.lastName = lastName;
         this.userName = userName;
         this.password = password;
     }
-    public static Fill registerFields(String firstName, String lastName, String userName, String password) {
+    public static Fill loginFields(String userName, String password) {
 
-        return Tasks.instrumented(Fill.class, firstName, lastName, userName, password);
+        return Tasks.instrumented(Fill.class, userName, password);
     }
 
     @Override
@@ -38,14 +31,11 @@ public class Fill implements Task {
 
         actor.attemptsTo(
                 WaitUntil.angularRequestsHaveFinished(),
-                //Scroll.to(subTitle),
-                Enter.theValue(firstName).into(firstNameLb),
-                Scroll.to(lastName),
-                Enter.theValue(lastName).into(lastNameLb),
-                Scroll.to(userName),
+                Scroll.to(userNameLb),
                 Enter.theValue(userName).into(userNameLb),
-                Scroll.to(password),
-                Enter.theValue(password).into(passwordLb)
+                Scroll.to(passwordLb),
+                Enter.theValue(password).into(passwordLb),
+                Click.on(loginLb)
         );
 
     }

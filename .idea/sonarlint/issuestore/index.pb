@@ -18,3 +18,27 @@ M
 src/main/java/tasks/Fill.java,a\0\a016dbccce63b3d7b7a5f35434e6c3949d4d6a73
 ^
 .src/main/java/userinterfaces/RegisterPage.java,2\8\28fabb59a5485b06f974d8c834131635aab6000b
+9
+	Readme.md,0\c\0c1945d7443c2e154bd3e421c0d438bd4086d8c3
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+7
+gradlew,5\b\5bbfa66edb4db3c7c33c5181f43510990d3307f9
+;
+gradlew.bat,2\a\2a45a911a8f1836b0b6c5b758962572012d8f8c3
+?
+settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
+T
+$src/main/java/utils/KillBrowser.java,4\5\45a83bb62fe50622adc2b813784ad0bc7fd17936
+]
+-src/main/java/userinterfaces/ProfilePage.java,4\a\4a2a8d0bf3eb8ae3383495a3b7f1b01d730efce0
+[
++src/main/java/userinterfaces/BooksPage.java,3\a\3a8b7052ccdfe694b7b6f00bb39e019ef94de336
+L
+src/main/java/tasks/Add.java,e\0\e05d79ae821f6df8fe33077711e83fcc24961b19
+g
+7src/test/java/stepdefinitions/caso2StepDefinitions.java,f\9\f9565d03f9b1b98741b8d42b117b49f6b9f7857a
+N
+target/site/reports/index.html,1\a\1abe88ee5e75f4c100698712e31f25ab061269ec
