@@ -10,18 +10,18 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static userinterfaces.LoginPage.*;
 
-public class Fill implements Task {
+public class FillLogin implements Task {
     private final String userName;
     private final String password;
 
-    public Fill(String userName, String password) {
+    public FillLogin(String userName, String password) {
 
         this.userName = userName;
         this.password = password;
     }
-    public static Fill loginFields(String userName, String password) {
+    public static FillLogin fields(String userName, String password) {
 
-        return Tasks.instrumented(Fill.class, userName, password);
+        return Tasks.instrumented(FillLogin.class, userName, password);
     }
 
     @Override
