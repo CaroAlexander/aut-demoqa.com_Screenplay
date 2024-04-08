@@ -42,3 +42,15 @@ g
 7src/test/java/stepdefinitions/caso2StepDefinitions.java,f\9\f9565d03f9b1b98741b8d42b117b49f6b9f7857a
 N
 target/site/reports/index.html,1\a\1abe88ee5e75f4c100698712e31f25ab061269ec
+R
+"src/main/java/tasks/FillLogin.java,7\c\7c54b400f6d9a3d53ec9de23f4b999baa56fe154
+Q
+!src/main/java/tasks/FillForm.java,d\0\d0566f577fe77201b27f71d37b00756807357156
+^
+.src/main/java/userinterfaces/LeftMenuPage.java,4\c\4cc6690724a15396fe579b9048cf98a18280fdee
+l
+<src/main/java/userinterfaces/AutomationPracticeFormPage.java,1\e\1e4d8f75875c8b3a7913b7bc979799dba38de0db
+V
+&src/main/java/questions/AreEquals.java,6\7\67e5b7990dd50b6ddd293b327360ec39bc9651c9
+a
+1src/main/java/userinterfaces/ConfirmFormPage.java,c\4\c47d80b3d4129341c3cf4da76d11f6d1cec3041e

@@ -12,7 +12,7 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.webdriver.SerenityWebdriverManager;
 import tasks.Add;
-import tasks.Fill;
+import tasks.FillLogin;
 import tasks.Going;
 import utils.KillBrowser;
 
@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static userinterfaces.LoginPage.newUserBtn;
 import static userinterfaces.ProfilePage.*;
 
 public class caso1StepDefinitions {
@@ -57,8 +56,7 @@ public class caso1StepDefinitions {
 
             theActorInTheSpotlight().
                     wasAbleTo(
-                            //Going.to(newUserBtn),
-                            Fill.loginFields(userName, password)
+                            FillLogin.fields(userName, password)
                     );
             theActorInTheSpotlight().remember("User name", userName);
         }
